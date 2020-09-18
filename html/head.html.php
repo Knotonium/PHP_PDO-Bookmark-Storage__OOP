@@ -8,4 +8,4 @@
     </head>
     <body>
         <h1><?= $headline ?></h1>
-        <hr>
+        <hr> 

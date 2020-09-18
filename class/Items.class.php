@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class Items {//singular!!
+class Items {
     
     private $id;
     private $url;

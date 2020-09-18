@@ -39,4 +39,4 @@ abstract class Page {
         include 'html/foot.html.php';
     }
     
-}
+} 

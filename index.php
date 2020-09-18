@@ -10,25 +10,7 @@ class IndexPage extends Page {
     public function __construct() {
         parent::__construct('Bookmarks', 'Bookmarks');
     }
-    
-    function init(){
-       // $id = 0;
-        $itemsDao = new itemsDao();
-        //$items = $itemsDao->readOne(intVal($id));
-
-        // if ($items == null) {
-        // $items = new items();
-        // }
-        if (isSet($_POST['shortbtn'])) {
-            $items = new items();  //verschoben
-            $items->setUrl($_POST['url']);
-            $items->setCode($_POST['code']);
-           // if ($id == 0) {
-                $itemsDao->create($items);
-           // }
-        }
-    }
-
+      
     function viewContent() : void {
         $itemsDao = new ItemsDao();
         $items = $itemsDao->readAll();

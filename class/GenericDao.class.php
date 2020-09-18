@@ -118,4 +118,4 @@ abstract class GenericDao {
         return $this->connection;
     }
 
-}
+} 

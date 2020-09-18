@@ -27,4 +27,17 @@ class ItemsDao extends GenericDao {
         return array_merge($this->getCreateArray($items), [ ':id' => $items->getId() ]);
     }
 }
+$id = 0;
+$itemsDao = new itemsDao();
+$items = $itemsDao->readOne(intVal($id));
 
+if ($items == null) {
+   $items = new items();
+}
+if (isSet($_POST['shortbtn'])) {
+    $items->setUrl($_POST['url']);
+    $items->setCode($_POST['code']);
+    if ($id == 0) {
+        $itemsDao->create($items);
+    }
+}
